@@ -7,7 +7,7 @@ Imports Autodesk.AutoCAD.Runtime
 
 Public Class Class1
 
-    <CommandMethod("BlockCre")>
+    <CommandMethod("ValveBlock")>
     Sub BlockCCre()
         Dim doc As Document = Application.DocumentManager.MdiActiveDocument
         Dim db As Database = doc.Database
@@ -55,9 +55,7 @@ Public Class Class1
         Dim collection As ObjectIdCollection = New ObjectIdCollection(ids)
         Dim mapping As IdMapping = New IdMapping()
         db.DeepCloneObjects(collection, blockId, mapping, True)
-
-      
- 
+        
         valveSpecInjection(count)
         
         doc.SendStringToExecute("._ATTSYNC _N " + count , True, False, False)
@@ -424,13 +422,11 @@ Public Class Class1
                     Dim Ref As BlockReference
                     Ref = transactie.GetObject(BlokRefId, OpenMode.ForWrite)
                     Dim a = Ref.Name
-
                     Dim BlokDefinities As BlockTable
                     BlokDefinities = transactie.GetObject(dwg.BlockTableId, OpenMode.ForRead)
                     Dim Blokdefid = BlokDefinities(Ref.Name)
                     Dim BlokDefinitie As BlockTableRecord
                     BlokDefinitie = transactie.GetObject(Blokdefid, OpenMode.ForRead)
-
                     Dim AttRefIdColl = Ref.AttributeCollection
 
                     For Each elementId In BlokDefinitie
@@ -453,85 +449,6 @@ Public Class Class1
             End Using
         End Using
     End Sub
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <CommandMethod("CreateBlockEx1")>
-    Sub CreateBlockEx1()
-        Dim doc As Document = Application.DocumentManager.MdiActiveDocument
-        Dim db As Database = doc.Database
-        Dim ed As Editor = doc.Editor
-
-        Dim opts As PromptSelectionOptions = New PromptSelectionOptions()
-        opts.MessageForAdding = "Select entities: "
-        Dim selRes As PromptSelectionResult = ed.GetSelection(opts)
-
-        If (selRes.Status <> PromptStatus.OK) Then
-            Return
-        End If
-
-        Dim ids As ObjectId() = selRes.Value.GetObjectIds()
-        Dim blockId As ObjectId = ObjectId.Null
-
-        Using trans As Transaction = db.TransactionManager.StartTransaction
-            Dim bt As BlockTable = TryCast(trans.GetObject(db.BlockTableId, OpenMode.ForRead), BlockTable)
-            Dim btr As BlockTableRecord = TryCast(trans.GetObject(bt(BlockTableRecord.ModelSpace), OpenMode.ForRead),
-                                                  BlockTableRecord)
-            Dim counter As Integer = CounterSetting(bt, db)
-
-            If (Not bt.Has("valve" + counter.ToString())) Then
-
-                bt.UpgradeOpen()
-
-                Dim record As BlockTableRecord = New BlockTableRecord()
-                record.Name = "valve" + counter.ToString()
-
-                blockId = bt.Add(record)
-                trans.AddNewlyCreatedDBObject(record, True)
-
-                If blockId <> ObjectId.Null Then
-                    Using acBlkRef As New BlockReference(New Point3d(0, 0, 0), blockId)
-
-                        Dim acCurSpaceBlkTblRec As BlockTableRecord
-                        acCurSpaceBlkTblRec = trans.GetObject(db.CurrentSpaceId, OpenMode.ForWrite)
-                        acCurSpaceBlkTblRec.AppendEntity(acBlkRef)
-                        trans.AddNewlyCreatedDBObject(acCurSpaceBlkTblRec, True)
-                    End Using
-
-
-                End If
-
-
-            End If
-            trans.Commit()
-
-        End Using
-
-        Dim collection As ObjectIdCollection = New ObjectIdCollection(ids)
-        Dim mapping As IdMapping = New IdMapping()
-        db.DeepCloneObjects(collection, blockId, mapping, True)
-
-
-        ed.Regen()
-        ed.UpdateScreen()
-        doc.SendStringToExecute(vbCr + "UPDATETHUMBSNOW" + vbCr, True, False, False)
-    End Sub
-
 
     Private Function CounterSetting(bt As BlockTable, db As Database) As Integer
         Dim counter As Integer = 0
