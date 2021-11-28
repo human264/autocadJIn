@@ -10,3 +10,12 @@ C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4
 C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.dll
 C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.xml
 C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.pdb
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\bin\Debug\ClassLibrary4.dll
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\bin\Debug\ClassLibrary4.pdb
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\bin\Debug\ClassLibrary4.xml
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.vbproj.AssemblyReference.cache
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.vbproj.CoreCompileInputs.cache
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.vbproj.CopyComplete
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.dll
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.xml
+C:\Users\jhy\RiderProjects\autocadJIn\ClassLibrary4\obj\Debug\ClassLibrary4.pdb
