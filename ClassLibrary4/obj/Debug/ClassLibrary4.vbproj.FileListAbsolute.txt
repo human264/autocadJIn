@@ -1,0 +1,12 @@
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\ClassLibrary4.dll
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\ClassLibrary4.pdb
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\ClassLibrary4.xml
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\accoremgd.dll
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\acdbmgd.dll
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\bin\Debug\acmgd.dll
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.vbprojAssemblyReference.cache
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.vbproj.CoreCompileInputs.cache
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.vbproj.CopyComplete
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.dll
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.xml
+C:\Users\human\RiderProjects\ClassLibrary4\ClassLibrary4\obj\Debug\ClassLibrary4.pdb
